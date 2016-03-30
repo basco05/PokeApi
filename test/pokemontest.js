@@ -1,7 +1,7 @@
 var request = require('supertest');
 var expect = require('chai').expect;
 var should = require('chai').should();
-require('./app.js'); // which executes 'mongoose.connect()'
+require('./index.js'); // which executes 'mongoose.connect()'
 var mongoose = require('mongoose');
 
 var app = require('express')();
