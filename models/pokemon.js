@@ -23,6 +23,6 @@ var Schema = mongoose.Schema;
 	- De benodigde static methods
 	- De benodigde instance methods
 	*/
-	var pokemon = mongoose.model('Pokemon',pokemonSchema);
+	var pokemon = mongoose.model('pokemon',pokemonSchema);
 
 module.exports = pokemon;
