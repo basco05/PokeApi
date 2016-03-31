@@ -4,10 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-//var mongoose = require('mongoose');
+var mongoose = require('mongoose');
 
 // Data Access Layer
-//mongoose.connect('mongodb://pokemon:12345@ds055772.mlab.com:55772/pokemon');
+mongoose.connect('mongodb://pokemon:12345@ds055772.mlab.com:55772/pokemon');
 // /Data Access Layer
 
 // Models
@@ -26,8 +26,8 @@ function handleError(req, res, statusCode, message){
 };
 
 // Routes
-//var routes = require('./routes/index');
-//var pokemons = require('./routes/pokemons')(mongoose, pokemon, handleError);
+var routes = require('./routes/index');
+var pokemons = require('./routes/pokemons')(mongoose, pokemon, handleError);
 // /Routes
 
 var app = express();
